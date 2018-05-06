@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo Numérico 2018.1</title>
+    Profª: Juliana Vianna Valerio <br>
+    <a href="https://sites.google.com/site/cnuufrjcc20181/home" target="_blank">Página do Curso</a>  <br>
+    <a href="https://drive.google.com/file/d/1o71M0uQJEsyI0gSwmm-DgpEN7N22tRKU/view" target="_blank">Lista 1</a>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({
+        MathML: {
+          extensions: ["mml3.js"]
+        }
+      });
+      </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          MathML: {
+            extensions: ["content-mathml.js"]
+          }
+        });
+        </script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <!--
+    Documentação MathML = https://www.w3.org/TR/MathML3/
+    -->
+    <body>
+        </head>
+    <div id="questao1">
+        
+        <h4>
+            1) Em cada um dos itens abaixo são dados um número p e uma aproximação ṗ de p. <br> 
+            Determine, em cada caso, o erro absoluto, o erro relativo e a quantidade de algarismos corretos.
+        </h4>
+
+        <div>
+            <b>Erro absoluto:</b><br>
+            Diferença entre a valor exato de um número x e o seu valor aproximado ẋ.<br>
+            <b>EAx = x – ẋ</b>
+        </div>
+        <br>
+        <div>
+            <b>Erro relativo:</b><br>
+            Como dependendo das grandezas envolvidas o erro absoluto pode não ser muito significativo, <br>
+            portanto empregamos o erro relativo que é o erro absoluto dividido pelo valor aproximado ẋ: <br>
+            <b>ERx = EAx/ẋ</b>
+        </div>
+        <br>
+        Determine, em cada caso, o erro absoluto, o erro relativo e a quantidade de algarismos corretos:
+        <div id="respostaQuestao1">
+            <b>
+                a) 
+                <math style="font-size: 18px" xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mi>p</mi>
+                    <mo>=</mo>
+                    <mfrac>
+                        <mn>1</mn>
+                        <mi>e</mi>
+                    </mfrac>
+                    <mo>,</mo>
+                    <mspace width="0.3em"></mspace>
+                    <mi>ṗ</mi>
+                    <mo>=</mo>
+                    <mn>0.3666</mn>
+                    <mo>:</mo>
+                </math><br>
+            </b>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mi>EAx</mi>
+                <mo>=</mo>
+                <mn>0.0012794411714423525872</mn>
+            </math>
+                <br>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mi>ERx</mi>
+                <mo>=</mo>
+                <mn>0.0034900195620358773922</mn>
+            </math>
+            <br><br>
+            <b>
+                b) 
+                <math style="font-size: 18px">
+                    <mi>p</mi>
+                    <mo>=</mo>
+                    <msup>
+                        <mn>2</mn>
+                        <mn>10</mn>
+                    </msup>
+                    <mo>,</mo>
+                    <mspace width="0.3em"></mspace>
+                    <mi>ṗ</mi>
+                    <mo>=</mo>
+                    <mn>1000</mn>
+                    <mo>:</mo>
+                </math>
+                <br>
+            </b>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mi>EAx</mi>
+                <mo>=</mo>
+                <mn>24.0</mn>
+            </math>
+            <br>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mi>ERx</mi>
+                <mo>=</mo>
+                <mn>0.024</mn>
+            </math>
+            <br><br>
+            <b>
+                c) 
+                <math style="font-size: 18px">
+                    <mi>p</mi>
+                    <mo>=</mo>
+                    <mtext>sen</mtext>
+                    <mo>(</mo>
+                    <mn>0.01</mn>
+                    <mo>)</mo>
+                    <mo>,</mo>
+                    <mspace width="0.3em"></mspace>
+                    <mi>ṗ</mi>
+                    <mo>=</mo>
+                    <mn>0</mn>
+                    <mo>:</mo>
+                </math>
+                <br>
+            </b>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mi>EAx</mi>
+                <mo>=</mo>
+                <mn>0.0099998333341666644641</mn>
+            </math> <br>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mi>ERx</mi>
+                <mo>=</mo>
+                <mtext>divisão por 0</mtext> 
+            </math><br>
+        </div>
+    </div>
+    <div id="questao2">
+        <h4>
+            2) Seja
+            <math style="font-size: 20px" xmlns="http://www.w3.org/1998/Math/MathML">
+                <mi>f</mi>
+                <mtext>(</mtext>
+                <mi>x</mi>
+                <mtext>)</mtext>
+                <mo>=</mo>
+                <mfrac>
+                    <mrow>
+                        <mi>x</mi>
+                        <mtext>cos</mtext>
+                        <mo>(</mo>
+                        <mi>x</mi>
+                        <mo>)</mo>
+                        <mo>-</mo>
+                        <mtext>sen</mtext>
+                        <mo>(</mo>
+                        <mi>x</mi>
+                        <mo>)</mo>
+                    </mrow>
+                    <mrow>
+                        <mi>x</mi>
+                        <mo>-</mo>
+                        <mtext>sen</mtext>
+                        <mo>(</mo>
+                        <mi>x</mi>
+                        <mo>)</mo>
+                    </mrow>
+                </mfrac>
+            </math>
+        </h4>
+        <div id="respostaQuestao2">
+            <b>
+                a) Calcule <math style="font-size: 18px" xmlns="http://www.w3.org/1998/Math/MathML">
+                    <msub>
+                        <mtext>lim</mtext>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>→</mo>
+                            <mn>0</mn>
+                        </mrow>
+                    </msub>
+                    <mi>f</mi>
+                    <mtext>(</mtext>
+                    <mi>x</mi>
+                    <mtext>)</mtext>
+                    <mo>=</mo>
+                    <mn>-2</mn>
+                </math>
+                <a href="imgs/questao2-a.jpg" target="_blank">Resolução</a>
+            </b>
+            <br>
+            <b>
+                b) Usando 4 dígitos e arredondamento, resolva
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mi>f</mi>
+                    <mtext>(</mtext>
+                    <mn>0.01</mn>
+                    <mtext>)</mtext>
+                    <mo>=</mo>
+                    <mn>-2.0000</mn>
+                </math>
+            </b>
+            <br>
+            <b>
+                c) O valor real da expressão é 
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mi>f</mi>
+                    <mtext>(</mtext>
+                    <mn>0.01</mn>
+                    <mtext>)</mtext>
+                    <mo>=</mo>
+                    <mn>−1.99899998</mn>
+                </math>
+                . Encontre o erro relativo ao que foi obtido no item (b).
+                <br>
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mi>EAx</mi>
+                    <mo>=</mo>
+                    <mn>3.99899998</mn>
+                </math>
+                <br>
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mi>ERx</mi>
+                    <mo>=</mo>
+                    <mn>-1.99949999</mn>
+                </math>
+            </b>
+        </div>
+    </div>
+    <div id="questao3">
+        <h4>
+            3) Seja um computador binário, cujo sistema de ponto flutuante tenha 1 bit para o sinal do número, <br>
+            5 bits para o expoente e 6 bits para a mantissa, num total de 12 bits. Responda:
+        </h4>
+        <div id="respostaQuestao3">
+            <b>
+                a) Qual o menor número positivo e o maior número positivo nele representável?
+            </b>
+            <br>
+            <b>
+                b) Qual o menor número maior que 4.25, nele representável?
+            </b>
+            <br>
+            <b>
+                c) Qual o maior número menor que 80 , nele representável?
+            </b>
+            <br>
+            <b>
+                d) Efetue, nele, a multiplicação 0.8 × 5 e indique o resultado.
+            </b>
+            <br>
+            <b>
+                e) Represente o número 3.1 nesta máquina e calcule os erros absoluto e relativo da representação.
+            </b>
+            <br>
+        </div>
+    </div>
+    <div id="questao4">
+        <h4>
+            4) A solução das equações do segundo grau no computador está sujeita a erros de arredondamento. <br>
+            Lembrando que dado uma equação 
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                    <mi>a</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <msup>
+                        <mi>x</mi>
+                        <mn>2</mn>
+                    </msup>
+                    <mo>+</mo>
+                    <mi>b</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>x</mi>
+                    <mo>+</mo>
+                    <mi>c</mi>
+                    <mo>=</mo>
+                    <mn>0</mn>
+                </mrow>
+            </math>, as raízes seriam dadas por:
+            <br>
+            <math style="font-size: 23px" xmlns="http://www.w3.org/1998/Math/MathML">
+                <mfrac>
+                    <mrow>
+                            <mo>-</mo>
+                            <mi>b</mi>
+                        <mo>±</mo>
+                        <msqrt>
+                            <msup>
+                                <mi>b</mi>
+                                <mn>2</mn>
+                            </msup>
+                            <mo>-</mo>
+                            <mn>4</mn>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>a</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>c</mi>
+                        </msqrt>
+                    </mrow>
+                    <mrow>
+                        <mn>2</mn>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>a</mi>
+                    </mrow>
+                </mfrac>
+            </math>
+        </h4>
+        <div id="respostaQuestao4">
+                <b>
+                    a) Descreva o que pode ocorrer quando 
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>b</mi>
+                        <mo>></mo>
+                        <mn>0</mn>
+                        <mspace width="0.3em"></mspace>
+                        <mtext>e</mtext>
+                        <mspace width="0.3em"></mspace>
+                        <mo>|</mo>
+                        <msup>
+                            <mi>b</mi>
+                            <mn>2</mn>
+                        </msup>
+                        <mo>|</mo>
+                        <mo>>></mo>
+                        <mo>|</mo>
+                        <mn>4</mn>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>a</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>c</mi>
+                        <mo>|</mo>
+                    </math>
+                    ?
+                </b>
+                <br>
+                <b>
+                    b) Uma forma de contornar isso é tomando 
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>z</mi>
+                        <mo>=</mo>
+                        <mfrac>
+                            <mn>1</mn>
+                            <mi>x</mi>
+                        </mfrac>
+                    </math>
+                    (
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>x</mi>
+                    </math>
+                    não pode ser 0 caso 
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>c</mi>
+                        <mo>≠</mo>
+                        <mn>0</mn>
+                    </math>
+                    ), fazendo com que se tenha a <br> 
+                    equação do segundo grau (ao realizar o produto de
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <msup>
+                            <mi>z</mi>
+                            <mn>2</mn>
+                        </msup>
+                    </math>
+                    em ambos os lados da igualdade): <br>
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>a</mi>
+                        <mo>+</mo>
+                        <mi>b</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>z</mi>
+                        <mo>+</mo>
+                        <mi>c</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <mi>z</mi>
+                            <mn>2</mn>
+                        </msup>
+                        <mo>=</mo>
+                        <mn>0</mn>
+                    </math>
+                    <br><br>
+                    Descreva qual seria a solução desta equação do segundo grau e diga como <br>
+                    obter ambas as raízes de forma “segura” (usando ambas as formas).
+                </b>
+        </div>
+    </div>
+    <div id="questao5">
+        <h4>
+            5) Considere a razão:
+            <math style="font-size: 20px" xmlns="http://www.w3.org/1998/Math/MathML">
+                <mi>R</mi>
+                <mo>=</mo>
+                <mfrac>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mo>(</mo>
+                        <mi>n</mi>
+                        <mo>-</mo>
+                        <mn>2</mn>
+                        <mo>)</mo>
+                        <mo>&InvisibleTimes;</mo>
+                        <mo>(</mo>
+                        <mi>n</mi>
+                        <mo>-</mo>
+                        <mn>4</mn>
+                        <mo>)</mo>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>...</mi>
+                        <mn>2</mn>
+                    </mrow>
+                    <mrow>
+                        <mo>(</mo>
+                        <mi>n</mi>
+                        <mo>-</mo>
+                        <mn>1</mn>
+                        <mo>)</mo>
+                        <mo>&InvisibleTimes;</mo>
+                        <mo>(</mo>
+                        <mi>n</mi>
+                        <mo>-</mo>
+                        <mn>3</mn>
+                        <mo>)</mo>
+                        <mo>&InvisibleTimes;</mo>
+                        <mo>(</mo>
+                        <mi>n</mi>
+                        <mo>-</mo>
+                        <mn>5</mn>
+                        <mo>)</mo>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>...</mi>
+                        <mn>1</mn>
+                    </mrow>
+                </mfrac>
+            </math>
+            <br><br>
+            onde n é par. É de conhecimento que quando n = 100 e n = 400, tem-se
+            R ≈ 12.5645 e R ≈ 25.0820, respectivamente.
+        </h4>
+    </div>
+    <div id="respostaQuestao5">
+        <b>
+            a) O seguinte código (em teoria), cálcula o valor de R. Crie um programa na <br>
+            linguagem que desejar e identifique porque este funciona quando n = 100 e <br>
+            não funciona quando n = 400.
+        </b>
+    </div>
+</body>
+
+</html>
