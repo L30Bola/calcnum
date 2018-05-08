@@ -280,7 +280,7 @@
                 </mrow>
             </math>, as raízes seriam dadas por:
             <br>
-            <math style="font-size: 23px" xmlns="http://www.w3.org/1998/Math/MathML">
+            <math style="font-size: 25px" xmlns="http://www.w3.org/1998/Math/MathML">
                 <mfrac>
                     <mrow>
                             <mo>-</mo>
@@ -334,6 +334,13 @@
                     </math>
                     ?
                 </b>
+                <br>
+                Utilizando o código:
+                <div id="formulaBhaskara" style="white-space: pre-wrap; background-color: #EFF0F1;">def bhaskara(a, b, c):
+                delta=math.sqrt(b**2 - 4*a*c)
+                return (-b+delta)/2*a, (-b-delta)/2*a</div>
+                Mostra que o delta tende a ficar muito grande (utilizei os valores a=1, b=10000 e c=1) e <br>
+                as raízes achadas são, respectivamentes, mais próxima de zero (+) e mais próxima de delta (-). <br>
                 <br>
                 <b>
                     b) Uma forma de contornar isso é tomando 
@@ -445,6 +452,18 @@
             a) O seguinte código (em teoria), cálcula o valor de R. Crie um programa na <br>
             linguagem que desejar e identifique porque este funciona quando n = 100 e <br>
             não funciona quando n = 400.
+        </b>
+            <div id="codProf" style="white-space: pre-wrap; background-color: #EFF0F1;">                    n = 100
+                    T = 1
+                    for i = 2, i ≤ n, i+ = 2 do
+                    T = T ∗ i
+                    B = 1
+                    for i = 1, i ≤ n − 1, i+ = 2 do
+                    B = B ∗ i
+                    R = T /B</div>
+        <br>
+        <b>
+            b) Reescreva o código anterior, de tal modo que o problema não ocorra mais.
         </b>
     </div>
 </body>
